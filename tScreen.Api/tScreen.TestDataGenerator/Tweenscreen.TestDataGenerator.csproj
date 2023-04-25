@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <LangVersion>latest</LangVersion>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <OutputType>Exe</OutputType>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Bogus" Version="34.0.2" />
+      <PackageReference Include="CsvHelper" Version="29.0.0" />
+      <PackageReference Include="Faker.Net" Version="2.0.154" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Application\Application.csproj" />
+      <ProjectReference Include="..\Core\Core.csproj" />
+      <ProjectReference Include="..\Domain\Domain.csproj" />
+    </ItemGroup>
+
+</Project>
