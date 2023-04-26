@@ -15,8 +15,4 @@
     <Compile Include="system\tScreen_api_worker.supervisor.conf" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="NewFolder\" />
-  </ItemGroup>
-
 </Project>
