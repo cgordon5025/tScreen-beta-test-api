@@ -10,11 +10,4 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="GraphQl\Features\Objects\Adventure\" />
-    <Folder Include="Mappings\" />
-    <Folder Include="Models\" />
-    <Folder Include="Templates\" />
-  </ItemGroup>
-
 </Project>

@@ -1,0 +1,60 @@
+﻿@using RazorLight
+@inherits TemplatePage<Application.Features.Admin.Person.Notifications.EmailNewAccountNotification.NewAccountData>
+Hello @Model.Fullname,
+
+Hello,
+
+Welcome to the futuresTHRIVE Tween Screen™. We are dedicated to creating the tools that identify and track pediatric
+mental health early and often. Together we will be making a difference in children’s lives today. We hope you find that
+using our technology is easy and engaging.
+
+Decades of research show that prevention and early intervention begin with monitoring before there are clear signs and
+symptoms. Take, for example, height, weight, hearing and vision screening. We subscribe to these types of monitoring
+because of the opportunity we have to intervene if we catch issues early and the consequences if we do not
+
+futuresTHRIVE™ has taken the most recent and most advanced science and created one HIPAA compliant survey that
+incorporates as many of the scientifically known risk and protective factors of childhood as we could, all in 12
+minutes. The results will include evidence-based scales and individual patient generated information.
+It is also visually fun! Where did we get the science? We used the latest research from the American Academy of
+Pediatrics, the American Academy of Psychiatry, JAMA, the CDC and WHO. Our team is made up of doctors and
+stakeholders across the industry who are dedicated to changing the consequences of undiagnosed mental health concerns.
+
+The futuresTHRIVE Tween Screen™ is best used for ages 9-14. It can be used with children as old as 18 but does not
+include risky behavior questions. The survey is non-diagnostic, however the questions are aligned with the DSM® and
+the American Academy of Pediatrics Common Factors®.
+
+More details here https://publications.aap.org/aapbooks/book/702/chapter-abstract/8793952/Integrating-Common-Factors-Into-the-Office-Visit?redirectedFrom=fulltext
+
+The report rendered for the practitioner includes child-reported information on
+    + Adverse Childhood Experiences®
+    + Positive Childhood Experiences®
+    + Positive findings
+    + Relationships, routines, functioning in school, home and with peers
+    + Parental health
+    + Family disruptions
+    + Anxiety
+    + Depression
+    + ADHD
+    + Suicidality
+
+We give you, the practitioner/administrator, the greatest amount of information for your clinical decision making.
+
+We all have mental health concerns, and your proactive participation in screening children is the first step to
+helping families and children navigate mental health issues as they arise. Together we will change the future of
+mental health monitoring.
+
+Privacy Policy https://www.futuresthrive.com/terms-conditions-and-privacy-policy/#disclaimer
+
+If you have any questions or concerns please email info@futuresTHRIVE.com.
+
+You username is @Model.Email and your temporary password is @Model.Password
+
+click here to login: @Model.ClientUrl
+
+Thank you,
+
+The futuresTHRIVE Team
+
+@{
+    await IncludeAsync("Partials/_footer.txt.cshtml");
+}
