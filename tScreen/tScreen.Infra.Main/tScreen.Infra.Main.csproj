@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -7,4 +7,19 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Pulumi" Version="3.54.1" />
+    <PackageReference Include="Pulumi.AzureAD" Version="5.37.0" />
+    <PackageReference Include="Pulumi.AzureDevOps" Version="2.7.0" />
+    <PackageReference Include="Pulumi.AzureNative" Version="1.100.1" />
+    <PackageReference Include="Pulumi.Random" Version="4.13.0" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\src\Core\Core.csproj"/>
+		<ProjectReference Include="..\core\tScreen.Infra.Core.csproj"/>
+		<ProjectReference Include="..\shared\tScreen.Infra.Shared.csproj"/>
+	</ItemGroup>
 </Project>
+

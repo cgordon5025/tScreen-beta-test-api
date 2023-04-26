@@ -7,4 +7,13 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Pulumi" Version="3.54.1" />
+    <PackageReference Include="Pulumi.AzureAD" Version="5.37.0" />
+    <PackageReference Include="Pulumi.AzureNative" Version="1.100.1" />
+    <PackageReference Include="Pulumi.Random" Version="4.13.0" />
+    <PackageReference Include="Pulumi.Tls" Version="4.10.0" />
+  </ItemGroup>
+
 </Project>

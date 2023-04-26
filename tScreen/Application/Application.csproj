@@ -8,10 +8,14 @@
 
 	<ItemGroup>
 		<PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+		<PackageReference Include="Azure.Identity" Version="1.8.2" />
 		<PackageReference Include="Azure.Storage.Blobs" Version="12.13.0" />
 		<PackageReference Include="Azure.Storage.Common" Version="12.12.0" />
 		<PackageReference Include="Azure.Storage.Queues" Version="12.11.0" />
 		<PackageReference Include="CsvHelper" Version="27.2.1" />
+		<PackageReference Include="FluentValidation" Version="11.5.2" />
+		<PackageReference Include="HotChocolate.Abstractions" Version="13.0.5" />
+		<PackageReference Include="HotChocolate.Types" Version="13.0.5" />
 		<PackageReference Include="libphonenumber-csharp" Version="8.12.57" />
 		<PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
 		<PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="2.2.0" />
