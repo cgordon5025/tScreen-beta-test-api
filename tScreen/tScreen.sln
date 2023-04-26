@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33414.496
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tScreen.Api", "tScreen.Api\tScreen.Api.csproj", "{7439AE24-620A-42B3-9811-31507017D22D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tScreen.Api", "tScreen.Api\tScreen.Api.csproj", "{7439AE24-620A-42B3-9811-31507017D22D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{B28608C7-6EE3-4342-AE03-4D7D5E4226A6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Worker", "Worker", "{EDCD9B2B-2876-412F-847A-9C68C1985914}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tScreen.Functions", "tScreen.Functions\tScreen.Functions.csproj", "{A3277BB4-241D-4C96-B9F0-F37B80C20899}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +21,17 @@ Global
 		{7439AE24-620A-42B3-9811-31507017D22D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7439AE24-620A-42B3-9811-31507017D22D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7439AE24-620A-42B3-9811-31507017D22D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3277BB4-241D-4C96-B9F0-F37B80C20899}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3277BB4-241D-4C96-B9F0-F37B80C20899}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3277BB4-241D-4C96-B9F0-F37B80C20899}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3277BB4-241D-4C96-B9F0-F37B80C20899}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EDCD9B2B-2876-412F-847A-9C68C1985914} = {B28608C7-6EE3-4342-AE03-4D7D5E4226A6}
+		{A3277BB4-241D-4C96-B9F0-F37B80C20899} = {EDCD9B2B-2876-412F-847A-9C68C1985914}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {88D5ACE4-C1AD-4043-A6E6-3F4A319545E7}
