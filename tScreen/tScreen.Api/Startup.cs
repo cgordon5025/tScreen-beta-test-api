@@ -74,8 +74,8 @@ namespace GraphQl
 
             services.ConfigureValidateSettings<AzureAdSettings>(Configuration.GetSection("AzureAd"));
 
-            services.ConfigureSettings<TweenScreenClientSettings>(
-                Configuration.GetSection(TweenScreenClientSettings.SectionName));
+            services.ConfigureSettings<tScreenClientSettings>(
+                Configuration.GetSection(tScreenClientSettings.SectionName));
 
             services.ConfigureSettings<SendGridSettings>(Configuration.GetSection("SendGrid"));
 
@@ -85,8 +85,8 @@ namespace GraphQl
             services.ConfigureValidateSettings<KnownWebClientsSettings>(Configuration.GetSection("KnownWebClients"),
                 out var knownWebClientsSettings);
 
-            services.ConfigureValidateSettings<TwsMssqlSettings>(Configuration.GetSection("TwsMssql"),
-                out var twsMssqlSettings);
+            services.ConfigureValidateSettings<tScreenMssqlSettings>(Configuration.GetSection("tScreenMssql"),
+                out var tScreenMssqlSettings);
 
             if (_environment.IsContainerHosted())
             {
@@ -161,13 +161,13 @@ namespace GraphQl
 
             services.AddSingleton<ITelemetryInitializer, ApplicationTelemetryInitializer>();
 
-            _logger.LogDebug("MSSQL Connection String {ConnectionString}", twsMssqlSettings.ConnectionString);
+            _logger.LogDebug("MSSQL Connection String {ConnectionString}", tScreenMssqlSettings.ConnectionString);
 
             services.AddPooledDbContextFactory<ApplicationDbContext>(options =>
             {
                 options.UseSqlServer(_environment.IsContainerHosted()
-                        ? @"Server=sqlserver;Database=TWS;User Id=sa;Password=DevelopmentPassword123;"
-                        : twsMssqlSettings.ConnectionString);
+                        ? @"Server=sqlserver;Database=tScreen;User Id=sa;Password=DevelopmentPassword123;"
+                        : tScreenMssqlSettings.ConnectionString);
             });
 
             services.AddIdentity<User, Role>()
@@ -219,7 +219,7 @@ namespace GraphQl
             //     builder.AddClient<QueueClient, QueueClientOptions>((options, _, _) =>
             //     {
             //         options.MessageEncoding = QueueMessageEncoding.Base64;
-            //         return new QueueClient(blobStorageSettings.ConnectionString, "tweenscreen-worklist-data", options);
+            //         return new QueueClient(blobStorageSettings.ConnectionString, "tscreen-worklist-data", options);
             //     });
             // });
 
@@ -229,8 +229,8 @@ namespace GraphQl
 
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
-                    Title = "TweenScreen.Api",
-                    Description = "Private TweenScreen API",
+                    Title = "tScreen.Api",
+                    Description = "Private tScreen API",
                     Version = "v1",
                     Contact = new OpenApiContact
                     {
@@ -244,7 +244,7 @@ namespace GraphQl
                 });
 
                 var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                var xmlPath = System.IO.Path.Combine(AppContext.BaseDirectory, xmlFile);
                 c.IncludeXmlComments(xmlPath);
 
                 c.AddSecurityDefinition(nameof(SecuritySchemeType.OAuth2), new OpenApiSecurityScheme
@@ -311,7 +311,7 @@ namespace GraphQl
                 app.UseSwagger(o => o.RouteTemplate = "/docs/{documentName}/openapi.json");
                 app.UseSwaggerUI(c =>
                 {
-                    c.SwaggerEndpoint("/docs/v1/openapi.json", "TweenScreen.Api v1");
+                    c.SwaggerEndpoint("/docs/v1/openapi.json", "tScreen.Api v1");
                     c.EnableDeepLinking();
                     c.RoutePrefix = "docs";
                 });

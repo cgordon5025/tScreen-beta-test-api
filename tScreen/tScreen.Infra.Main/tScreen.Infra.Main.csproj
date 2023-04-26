@@ -17,9 +17,9 @@
   </ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\..\src\Core\Core.csproj"/>
-		<ProjectReference Include="..\core\tScreen.Infra.Core.csproj"/>
-		<ProjectReference Include="..\shared\tScreen.Infra.Shared.csproj"/>
+		<ProjectReference Include="..\..\tScreen\Core\Core.csproj"/>
+		<!--<ProjectReference Include="..\core\tScreen.Infra.Core.csproj"/>
+		<ProjectReference Include="..\shared\tScreen.Infra.Shared.csproj"/>-->
 	</ItemGroup>
 </Project>
 
