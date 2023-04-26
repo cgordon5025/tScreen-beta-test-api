@@ -1,0 +1,4 @@
+name: tscreen-core
+runtime: dotnet
+description: Use this project for apps and services which should not be removed 
+  in stack re-shuffling (e.g., app service plans)
