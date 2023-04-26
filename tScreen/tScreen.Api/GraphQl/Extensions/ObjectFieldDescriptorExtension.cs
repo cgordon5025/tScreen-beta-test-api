@@ -12,3 +12,4 @@ namespace GraphQl.GraphQl.Extensions
                 create: service => service.GetRequiredService<IDbContextFactory<TDbContext>>().CreateDbContext(),
                 disposeAsync: (_, context) => context.DisposeAsync());
     }
+}
